@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Nexmo\User\User;
 
 class AdminUserController extends Controller
 {
@@ -14,8 +15,9 @@ class AdminUserController extends Controller
     public function index()
     {
         //
+        $user = \App\User::all();   
 
-        return view('admin.users.index');
+        return view('admin.users.index',compact('user'));
     }
 
     /**

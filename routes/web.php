@@ -30,4 +30,4 @@ Route::get('/admin/user/roles', ['middleware' => 'role', function (){
     return "Middle Ware ROLE";
 }]);
 
-
+Route::resource('admin/users','AdminUserController');
