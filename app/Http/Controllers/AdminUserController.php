@@ -15,7 +15,7 @@ class AdminUserController extends Controller
     public function index()
     {
         //
-        $user = \App\User::all();   
+        $user = \App\User::all();
 
         return view('admin.users.index',compact('user'));
     }
@@ -41,6 +41,8 @@ class AdminUserController extends Controller
     public function store(Request $request)
     {
         //
+       return $request->all();
+
     }
 
     /**
