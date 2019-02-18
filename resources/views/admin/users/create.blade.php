@@ -5,7 +5,6 @@
     <h1>Create Users</h1>
     {{--{{csrf_field()}}--}}
 
-
     {!! Form::open(['method'=>'post','action'=>'AdminUserController@store','file'=>true]) !!}
     {{csrf_field()}}
 
