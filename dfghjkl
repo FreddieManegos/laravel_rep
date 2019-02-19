@@ -1,0 +1,35 @@
+[33mcommit 6e2f415a17c7101306d0a734d2a1d7deec8a3744[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Freddie Mar Manegos <freddiemar.manegos@gmail.com>
+Date:   Tue Feb 19 06:17:30 2019 +0800
+
+    User able to persist
+
+[33mcommit 54a1774eaebd5e0a30450a24a939f9567b914401[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Freddie Mar Manegos <freddiemar.manegos@gmail.com>
+Date:   Fri Feb 15 05:51:59 2019 +0800
+
+    Can view and create user
+
+[33mcommit 9d46d09a12fe7f79829b24f0d4fa2ff3568be0c1[m
+Author: Freddie Mar Manegos <freddiemar.manegos@g.msuiit.edu.ph>
+Date:   Mon Feb 11 17:16:29 2019 +0800
+
+    Added the Create User
+
+[33mcommit aeb4addc298c29fb8f895fa81679f39c93c3782b[m
+Author: Freddie Mar Manegos <freddiemar.manegos@g.msuiit.edu.ph>
+Date:   Mon Feb 11 04:08:27 2019 +0800
+
+    Added the view all users
+
+[33mcommit 2e65ea7ea093d6133ab83409f6216667ac94133a[m
+Author: Freddie Mar Manegos <freddiemar.manegos@g.msuiit.edu.ph>
+Date:   Mon Feb 11 03:45:44 2019 +0800
+
+    Change html file content
+
+[33mcommit b22bb572c8e5475b4d7b95a9012b706d7de8fcff[m
+Author: Freddie Mar Manegos <freddiemar.manegos@g.msuiit.edu.ph>
+Date:   Mon Feb 11 03:34:22 2019 +0800
+
+    My first laravel project

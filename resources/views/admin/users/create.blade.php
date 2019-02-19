@@ -5,7 +5,7 @@
     <h1>Create Users</h1>
     {{--{{csrf_field()}}--}}
 
-    {!! Form::open(['method'=>'post','action'=>'AdminUserController@store','file'=>true]) !!}
+    {!! Form::open(['method'=>'post','action'=>'AdminUserController@store','file'=>true,'enctype' => "multipart/form-data"]) !!}
     {{csrf_field()}}
 
     <div class="form-group">
@@ -30,7 +30,7 @@
 
     <div class="form-group">
         {!! Form::label('file','File') !!}
-        {!! Form::file('file',null,['class'=>'form-control']) !!}
+        {!! Form::file('file',['class'=>'form-control']) !!}
     </div>
 
 
@@ -40,7 +40,7 @@
     </div>
 
     <div class="form-group">
-        {!! Form::submit('Edit Post',['class'=>'btn btn-info','required'=>'required']) !!}
+        {!! Form::submit('Create',['class'=>'btn btn-info','required'=>'required']) !!}
         {!! Form::close() !!}
     </div>
 
