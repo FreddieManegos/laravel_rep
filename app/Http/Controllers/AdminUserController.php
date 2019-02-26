@@ -7,7 +7,7 @@ use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserRequest;
-use App\Http\Requests\UserEditRequest;
+use Illuminate\Support\Facades\Session;
 
 class AdminUserController extends Controller
 {
@@ -48,15 +48,9 @@ class AdminUserController extends Controller
         //
 
         if(trim($request->password == '')){
-
             $input = $request->except('password');
-
         }else{
-
             $input= $request->all();
-
-            $input['password'] = bcrypt($request->password);
-
         }
 
 //        if($file  =  $request->file('file')) {
@@ -89,11 +83,8 @@ class AdminUserController extends Controller
 //            return "No Photos";
 
         if($file = $request->file('file')){
-
             $name = time().$file->getClientOriginalName();
-
             $file->move('images', $name);
-
             $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
@@ -143,29 +134,16 @@ class AdminUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UserEditRequest $request, $id)
+    public function update(Request $request, $id)
     {
         //
         $user = User::findOrFail($id);
 
-        if(trim($request->password == '')){
-
-            $input = $request->except('password');
-
-        }else{
-
-            $input= $request->all();
-
-            $input['password'] = bcrypt($request->password);
-
-        }
+        $input = $request->all();
 
         if($file = $request->file('file')){
-
             $name = time().$file->getClientOriginalName();
-
             $file->move('images', $name);
-
             $photo = Photo::create(['file' => $name]);
 
             $input['photo_id'] = $photo->id;
@@ -187,5 +165,10 @@ class AdminUserController extends Controller
     public function destroy($id)
     {
         //
+        $user = User::destroy($id);
+
+        Session::flash('deleted_user','The user has been deleted');
+
+        return redirect('/admin/users');
     }
 }

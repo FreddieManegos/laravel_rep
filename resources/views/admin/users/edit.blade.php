@@ -18,6 +18,13 @@
 
         <img src="/images/{{$user->photo->file}}" alt="" class="img-responsive img-rounded">
 
+        {!! Form::open(['method'=>'Delete','action'=>['AdminUserController@destroy',$user->id]]) !!}
+            <div class="input-group-text" id="btnGroupAddon">
+                {!! Form::submit("Delete User",['class'=>'btn btn-danger']) !!}
+            </div>
+        {!! Form::close() !!}
+
+
     </div>
 
 

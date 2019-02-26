@@ -24,10 +24,16 @@ Route::get('/admin', function(){
 
 });
 
+Route::group(['middleware'=>'admin'],function (){
+
+});
+
+Route::resource('admin/users','AdminUserController');
 
 Route::get('/admin/user/roles', ['middleware' => 'role', function (){
 
     return "Middle Ware ROLE";
+
 }]);
 
-Route::resource('admin/users','AdminUserController');
+Route::resource('admin/posts','AdminPostsController');
