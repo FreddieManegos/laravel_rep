@@ -6,6 +6,7 @@
         <thead>
         <tr>
             <th scope="col">Id</th>
+            <th scope="col">Picture</th>
             <th scope="col">User ID</th>
             <th scope="col">Category ID</th>
             <th scope="col">Photo ID</th>
@@ -17,6 +18,7 @@
     @foreach($post as $post)
         <tr>
             <th>{{$post->id}}</th>
+            <td><img height="50" src="{{$post->photo ? $post->photo->file : 'http://placehold.it/400x400'}}" alt=""></td>
             <td>{{$post->user->name}}</td>
             <td>{{$post->category_id}}</td>
             <td>{{$post->photo_id}}</td>

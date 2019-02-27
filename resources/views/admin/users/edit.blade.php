@@ -16,7 +16,7 @@
     @endif
     <div class="col-sm-3">
 
-        <img src="/images/{{$user->photo->file}}" alt="" class="img-responsive img-rounded">
+        <img height="50" src="{{$user->photo ? $user->photo->file : 'http://placehold.it/400x400'}}" alt="">
 
         {!! Form::open(['method'=>'Delete','action'=>['AdminUserController@destroy',$user->id]]) !!}
             <div class="input-group-text" id="btnGroupAddon">

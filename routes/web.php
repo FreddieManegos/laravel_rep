@@ -36,4 +36,10 @@ Route::get('/admin/user/roles', ['middleware' => 'role', function (){
 
 }]);
 
+
+Route::get('logout', 'Auth\LoginController@logout', function () {
+    return abort(404);
+});
+
+
 Route::resource('admin/posts','AdminPostsController');
